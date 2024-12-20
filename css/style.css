@@ -1,0 +1,270 @@
+.zindex {
+  z-index: 999999;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  background-color: #faae2b;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-left a {
+  flex: 1;
+}
+
+.nav-left a:hover {
+  flex: 1;
+  background-color: transparent;
+}
+
+.nav-right {
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  display: flex;
+}
+
+nav a:hover {
+  background-color: #8bd3dd;
+  text-shadow: 2px 2px 2px black;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+  height: calc(100vh - 40px);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+.hero img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.parent-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  z-index: 2;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.hero-content-i {
+  color: white;
+  z-index: 2;
+  padding: 20px;
+}
+
+/* auth page */
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.auth-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.auth-container h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.input-group label {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #faae2b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #8bd3dd;
+}
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #faae2b;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.back-button:hover {
+  background-color: #8bd3dd;
+}
+
+.register-link {
+  display: block;
+  margin-top: 1rem;
+  color: #faae2b;
+  text-decoration: none;
+  text-align: center;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* responsif */
+@media (max-width: 768px) {
+  nav a {
+    padding: 5px;
+    font-size: 18px;
+  }
+
+  .hero {
+    height: calc(100vh - 80px);
+  }
+
+  .hero img {
+    width: auto;
+    height: 100%;
+  }
+
+  .auth-container {
+    padding: 1.5rem;
+  }
+
+  .input-group input {
+    padding: 0.5rem;
+  }
+
+  button {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .hero {
+    height: calc(100vh - 100px);
+  }
+
+  .hero img {
+    width: auto;
+    height: 100%;
+  }
+
+  .auth-container {
+    padding: 1rem;
+  }
+
+  .input-group input {
+    padding: 0.5rem;
+  }
+
+  button {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  nav a {
+    padding: 3px;
+    font-size: 14px;
+  }
+
+  .hero {
+    height: calc(100vh - 120px);
+  }
+
+  .hero img {
+    width: auto;
+    height: 100%;
+  }
+}
